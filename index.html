@@ -51,6 +51,22 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#blog">Read</a>
                 </li>
+                <li class="nav-item new">
+                    <a href="#" class="nav-link" onclick="NightMode()">Night Mode &nbsp;<svg width="1em" height="1em"
+                            viewBox="0 0 16 16" class="bi bi-moon" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z" />
+                        </svg></a>
+                <li class="nav-item new">
+                    <a href="#" class="nav-link" onclick="NormalMode()">Normal Mode &nbsp;<svg width="1em" height="1em"
+                            viewBox="0 0 16 16" class="bi bi-sun" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.5 8a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0z" />
+                            <path fill-rule="evenodd"
+                                d="M8.202.28a.25.25 0 0 0-.404 0l-.91 1.255a.25.25 0 0 1-.334.067L5.232.79a.25.25 0 0 0-.374.155l-.36 1.508a.25.25 0 0 1-.282.19l-1.532-.245a.25.25 0 0 0-.286.286l.244 1.532a.25.25 0 0 1-.189.282l-1.509.36a.25.25 0 0 0-.154.374l.812 1.322a.25.25 0 0 1-.067.333l-1.256.91a.25.25 0 0 0 0 .405l1.256.91a.25.25 0 0 1 .067.334L.79 10.768a.25.25 0 0 0 .154.374l1.51.36a.25.25 0 0 1 .188.282l-.244 1.532a.25.25 0 0 0 .286.286l1.532-.244a.25.25 0 0 1 .282.189l.36 1.508a.25.25 0 0 0 .374.155l1.322-.812a.25.25 0 0 1 .333.067l.91 1.256a.25.25 0 0 0 .405 0l.91-1.256a.25.25 0 0 1 .334-.067l1.322.812a.25.25 0 0 0 .374-.155l.36-1.508a.25.25 0 0 1 .282-.19l1.532.245a.25.25 0 0 0 .286-.286l-.244-1.532a.25.25 0 0 1 .189-.282l1.508-.36a.25.25 0 0 0 .155-.374l-.812-1.322a.25.25 0 0 1 .067-.333l1.256-.91a.25.25 0 0 0 0-.405l-1.256-.91a.25.25 0 0 1-.067-.334l.812-1.322a.25.25 0 0 0-.155-.374l-1.508-.36a.25.25 0 0 1-.19-.282l.245-1.532a.25.25 0 0 0-.286-.286l-1.532.244a.25.25 0 0 1-.282-.189l-.36-1.508a.25.25 0 0 0-.374-.155l-1.322.812a.25.25 0 0 1-.333-.067L8.203.28zM8 2.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z" />
+                        </svg></a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -193,6 +209,57 @@
         function func(){
             var preloader = document.getElementById("loading");
             preloader.style.display="none";
+        }
+        //this is for nightmode and normalmode
+        function NightMode() {
+            var body = document.getElementById("body");
+            var heading1 = document.getElementById("videos");
+            var blogheading = document.getElementById("blog");
+            var card1 = document.getElementById("card1");
+            var card2 = document.getElementById("card2");
+            var card3 = document.getElementById("card3");
+            var card4 = document.getElementById("card4");
+            if (body.style.backgroundColor != "#162447")
+                body.style.backgroundColor = "#162447";
+            heading1.style.color = "white";
+            blog.style.color = "white";
+            card1.style.backgroundColor = "#1f4068";
+            card2.style.backgroundColor = "#1f4068";
+            card3.style.backgroundColor = "#1f4068";
+            card4.style.backgroundColor = "#1f4068";
+            card2.style.color = "white";
+            card1.style.color = "white";
+            card3.style.color = "white";
+            card4.style.color = "white";
+            card1.style.border = "1px solid white";
+            card2.style.border = "1px solid white";
+            card3.style.border = "1px solid white";
+            card4.style.border = "1px solid white";
+
+
+        }
+        function NormalMode() {
+            var body = document.getElementById("body");
+            var heading1 = document.getElementById("videos");
+            var blogheading = document.getElementById("blog");
+            if (body.style.backgroundColor != "white")
+                body.style.backgroundColor = "white";
+            heading1.style.color = "black";
+            blog.style.color = "black";
+            card1.style.backgroundColor = "white";
+            card2.style.backgroundColor = "white";
+            card3.style.backgroundColor = "white";
+            card4.style.backgroundColor = "white";
+            card1.style.color = "black";
+            card2.style.color = "black";
+            card3.style.color = "black";
+            card4.style.color = "black";
+            card1.style.border = "0.5px solid gray";
+            card2.style.border = "0.5px solid gray";
+            card3.style.border = "0.5px solid gray";
+            card4.style.border = "0.5px solid gray";
+
+
         }
     
     

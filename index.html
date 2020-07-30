@@ -15,10 +15,20 @@
         html {
             scroll-behavior: smooth;
         }
+        #loading {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            background: #fff url(833.gif) no-repeat center;
+            z-index: 999;
+        }
     </style>
 </head>
 
 <body>
+    <body id="body" onload="func()" >
+    <div id="loading">
+
 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
@@ -176,6 +186,15 @@
 
 
     <!-- Optional JavaScript -->
+    <script>
+        //This is for preloader
+        function func(){
+            var preloader = document.getElementById("loading");
+            preloader.style.display="none";
+        }
+    
+    
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
